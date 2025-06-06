@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/transaction.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+<body>
+
+
+<div class="outerblock">
+  <div class="outerform">
+
+    <div th:if="${error}">
+      <center>  <p style="color:red">Invalid Account Number</p></center>
+    </div>
+    <form id="form5" th:method="post" th:object="${del}" th:action="@{/Admin-page/delete}" onsubmit="return confirmacc()">
+      <h1 style="color: white;">DELETE ACCOUNT</h1>
+      <div class="mb-3">
+        <label for="Accountnumber" class="form-label">Account Number<span style="color: red;"> *</span></label>
+        <input type="text" class="form-control" id="Accountnumber" th:field="*{id}" oninput="validate()" required>
+        <div id="accerr" class="error">Invalid Account Number</div>
+      </div>
+      <div class="mb-3">
+        <label for="conAccountnumber" class="form-label">Confirm Account Number<span style="color: red;"> *</span></label>
+        <input type="password" class="form-control" id="conAccountnumber" oninput="confacc()" required>
+        <div id="conaccerr" class="error">Account Number Mismatch</div>
+      </div>
+
+      <input type="submit" class="btn btn-primary" ></input>
+    </form>
+
+  </div>
+
+</div>
+
+<script src="/javascript/deletejs.js"></script>
+
+</body>
+</html>

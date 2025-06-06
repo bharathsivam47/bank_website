@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link rel="stylesheet" href="/css/registration.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<ul class="bankname1">
+    <li class="bank">Bank of India</li>
+
+</ul>
+
+
+<div class="body1">
+    <div id="outerblock" class="card">
+        <h1 class="card-title  title1">Registration</h1>
+        <div th:if="${error}">
+            <p style="color:red">Age Limit Must be Greater than 18 and Less than 60</p>
+        </div>
+        <div th:if="${mailerror}">
+            <p style="color:red">Email already register</p>
+        </div>
+        <div th:if="${aaderror}">
+            <p style="color:red">Aadhar already register</p>
+        </div>
+        <div th:if="${usererror}">
+            <p style="color:red">Username already register</p>
+        </div>
+        <p th:if="${fileError}" th:text="${fileError}" style="color: red;"></p>
+        <form th:action="@{/Admin-page/register}" th:object="${user}" method="post" class="mb-3 form1" id="form6"
+              enctype="multipart/form-data" onsubmit="return formvalidate()">
+
+            <!--This is for first name-->
+
+            <div class="name" >
+                <div class="fullname">
+                    <label for="first" class="form-label labels labels1" >Full Name<span style="color: red;"> *</span></label>
+                    <input type="text" name="fullname1" id="first" th:field="*{fullname1}" class="form-control input-label" placeholder="Enter the First name" oninput="fullnamejs()" required>
+                    <div class="error" id="fullerr">Invalid Name</div>
+
+                </div>
+            </div>
+
+
+            <div class="name1">
+                <!-- This is for username-->
+                <label for="username"  class="form-label labels name1">Username<span style="color: red;"> *</span></label>
+                <input type="text" name="username" id="username" th:field="*{username}" class="form-control input-label name1" placeholder="Enter the Username" oninput="usernamejs()" required>
+                <div class="error" id="usererr">Invalid Username</div>
+            </div>
+
+
+            <!--This is date of birth-->
+
+            <div class="name2">
+                <div>
+                    <label for="dateofbirth" class="form-label labels"> Date of birth<span style="color: red;"> *</span></label>
+                    <input type="date" style="width: 500px; "  th:field="*{dob}" name="" id="dateofbirth" class="form-control input-label" required>
+                    <span class="error" style="color:red" th:if="${#fields.hasErrors('dob')}" th:errors="*{dob}"></span>
+                </div>
+
+                <div class="outerdrop">
+
+                </div>
+            </div>
+            <!--This is for Aadhaar Number-->
+            <div class="password1" style="margin-left: 40px !important;">
+                <div>
+                    <label for="Aadhaar-Number" class="form-label labels pas1">Aadhaar Number<span style="color: red;"> *</span></label>
+                    <input type="text" id="Aadhaar-Number" th:field="*{aadharno}" class="form-control input-label"  placeholder="Enter the Aadhaar Number" oninput="aadharjs()" required>
+                    <div class="error" id="aaderr">Invalid Aadhar</div>
+                </div>
+                <div class="palab" style="margin-left: 40px !important;">
+                    <label for="email" class="form-label labels pas1 email">Email<span style="color: red;"> *</span></label>
+                    <input type="text"   id="email" th:field="*{email}" class="form-control input-label email " placeholder="Enter the Email" oninput="emailjs()" required>
+                    <div class="error" id="emailerr">Invalid Email</div>
+                </div>
+
+            </div>
+            <label for="Gender1" class="Gender1 " >Gender<span style="color: red;"> *</span></label>
+            <select name="cars" id="Gender1" th:field="*{gender}" class="form-select" required>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="others">Others</option>
+
+            </select>
+            <!--This is for phone number-->
+            <div  style="margin-left: 40px !important; color: white;">
+                <label for="phone" class="form-label labels0" >Phone number<span style="color: red;"> *</span></label>
+                <input type="text" id="phone" th:field="*{phoneno}" class="form-control input-label"  maxlength="10" placeholder="Enter the phone Number" oninput="phonejs()" required>
+                <div class="error" id="phoneerr">Invalid Phone Number</div>
+            </div>
+            <div  style="margin-left: 40px !important;">
+                <label for="fileimg"  class="form-label labels" >Enter the image<span style="color: red;"> *</span></label>
+                <input type="file" id="fileimg"  name="image" th:field="*{photo}" class="form-control input-label" required>
+                <span class="error" style="color:red" th:if="${#fields.hasErrors('photo')}" th:errors="*{photo}"></span>
+            </div>
+            <label for="Fathers" class="Fathers" id="fathername">Fathers Name<span style="color: red;"> *</span></label>
+            <input type="text" id="Fathers" th:field="*{fathername}" class="form-control input-label Fathers" placeholder="Enter the Fathers name" oninput="fatherjs()" required>
+            <div class="error" id="fathererr">Invalid FatherName</div>
+            <label for="address" style="color: white;" class="address1">address<span style="color: red;"> *</span></label>
+            <textarea name="" id="address" th:field="*{address}" cols="50" rows="6" oninput="addressjs()"></textarea>
+            <div class="error" id="addresserr">Invalid Address</div>
+            <input  type="submit" class="btn btn-primary form-control submit sub"  >submit</input>
+
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<script src="/javascript/regisjs.js"></script>
+
+
+
+
+
+</body>
+</html>

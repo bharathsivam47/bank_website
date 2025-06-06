@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="/css/transaction.css">
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <title>Document</title>
+</head>
+<body>
+
+
+<div class="outerblock">
+  <div class="outerform">
+
+    <div th:if="${error}">
+      <p style="color:red">INVALID ACCOUNT DETAIL</p>
+    </div>
+    <form id="form5" th:method="post" onsubmit="return depositvalidate()" th:object="${depo}"  th:action="@{/Admin-page/deposit}">
+      <h1 style="color: white;">DEPOSIT AMOUNT</h1>
+      <div class="mb-3">
+        <label for="Accountnumber" class="form-label">Account Number<span style="color: red;"> *</span></label>
+        <input type="text" class="form-control" id="Accountnumber" oninput="accountno()" th:field="*{toId}"   required>
+        <div class="error" id="accerror" style="color:red ;">Invalid account number</div>
+
+      </div>
+      <div class="mb-3">
+        <label for="conAccountnumber" class="form-label">Account Number<span style="color: red;"> *</span></label>
+        <input type="password" class="form-control" id="conAccountnumber" oninput="confirm()"   required>
+        <div class="error" id="conaccerror" style="color:red ;">Account Number Mismatch</div>
+
+      </div>
+      <div class="mb-3">
+        <label for="amount1" class="form-label">Amount (in rupees)<span style="color: red;"> *</span></label>
+        <input type="text" class="form-control" id="amount1"  oninput="validate()" th:field="*{amount}" required>
+        <div class="error" id="amounterr" style="color:red ;">Invalid amount</div>
+      </div>
+      <input type="submit" class="btn btn-primary" ></input>
+    </form>
+
+  </div>
+
+</div>
+
+<script src="/javascript/depositjs.js"></script>
+</body>
+</html>

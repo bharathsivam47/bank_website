@@ -1,0 +1,288 @@
+
+form label {
+    align-items:start;
+    width: 500px;
+    display: block;
+    text-align: left;
+}
+
+
+
+.labels , .title1 {
+  color: white;
+}
+
+.labels1 {
+    width: 100px;
+}
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+
+
+
+.body1 {
+    height: 150vh;
+    display: flex;
+    min-height: 160vh;
+    align-items: start;
+ ;
+    justify-content: center;
+    background-image: url("loginback.jpg");
+    background-size: 1500px;
+    background-position: none;
+}
+
+input[type="email"]{
+    margin-left: 0px;
+}
+
+.name {
+    width: 550px;
+    margin-left: 40px !important;
+}
+
+.name1 {
+    margin-left: 20px !important;
+
+}
+
+.name2 {
+    margin-left: 40px !important;
+
+
+
+
+}
+
+.outerdrop {
+    padding-left: 20px;
+    margin-top: 8px;
+}
+ul {
+    list-style-type: none;
+    width: auto;
+    height: 70px;
+    background-color:rgba(0,11,200,0.4);
+    margin: 0px;
+    display: flex;
+    align-items: center;
+
+}
+
+ul li {
+  display: inline-block;
+  margin: 10px;
+
+}
+
+body {
+
+    margin: 0px;
+}
+
+li {
+    color: white !important;
+
+}
+
+li a:hover  {
+    color: black;
+}
+
+body {
+
+
+    height: 100vh;
+    background-image: url("loginback.jpg");
+    background-size: 1600px;
+    background-repeat: no-repeat;
+
+
+}
+
+.bankname li {
+    display: inline-block;
+    margin: 10px;
+
+
+  }
+.Genderdrop {
+    background-color: white!important; /* Orange button */
+
+    color: black !important; /* White text */
+    width: 100px !important;
+  }
+
+
+.outerdrop label {
+    color: white;
+}
+
+.name2 label {
+    width: 250px !important;
+}
+
+.drop1 {
+
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    color: rgba(0, 0, 0, 0.5) !important;
+}
+.labels {
+    color: white !important;
+}
+
+
+form input {
+
+    width: 250px !important;
+    font-weight: 100px;
+    border-color: white;
+
+}
+
+#outerblock {
+    display: flex;
+    width: 700px;
+    justify-content: center;
+    align-items: center;
+    padding:50px;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: relative;
+
+    top: 100px !important;
+}
+
+.fullname{
+ display: inline;
+ width: 400px !important;
+
+}
+
+
+.secondname {
+    display: inline;
+    margin-left: 70px;
+}
+
+.name {
+    display: flex;
+    flex-direction: row;
+    width: 400px !important;
+}
+
+.password1 {
+    display: flex;
+    flex-direction: row;
+    width: 530px;
+}
+
+.pas1 {
+    display: inline;
+}
+.palab{
+    margin-left: 20px;
+}
+
+.sub {
+    width: 400px !important;
+    position: relative;
+    left: 70px;
+
+}
+
+.already {
+    margin-top: 10px;
+    width: 400px;
+    position: relative;
+    left: 70px;
+}
+
+.email {
+    position: relative;
+    right: 20px;
+    margin-left:0px;
+}
+
+
+
+textarea{
+
+    position: relative;
+    left: 40px;
+    top: 10px;
+}
+
+.address1{
+         position: relative;
+         left: 40px;
+         width: 100px;
+
+}
+
+
+
+#message{
+    position: relative;
+    left: 50px;
+    color: red;
+    display: none;
+}
+
+
+
+.message{
+    position: relative;
+    left: 50px;
+    color: red;
+    display: none;
+}
+
+.datemessage{
+    position: relative;
+    left: 50px;
+    color: red;
+    display: none;
+
+}
+
+#Fathers{
+
+    position: relative;
+    left: 40px;
+}
+
+
+
+#fathername {
+    position: relative;
+    left: 40px;
+    color: white;
+
+}
+
+select {
+    position: relative;
+    left: 40px;
+}
+.Gender1 {
+    position: relative;
+    left: 40px;
+    color: white;
+
+}
+
+#Gender1{
+    width: 100px;
+}
+.error{
+  color:red;
+}
+

@@ -1,0 +1,47 @@
+body {
+    height: 100vh;
+    background-image: url("loginback.jpg");
+    background-size: 1600px;
+    background-repeat: no-repeat;
+}
+
+.outerblock {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+form  label {
+    color: white !important;
+}
+
+input{
+    width:350px !important;
+}
+
+.outerform{
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 100px;
+    border-radius: 20px;
+    
+}
+
+#messageforemail{
+    display: none;
+    color: red;
+}
+
+#messageforamo{
+    display: none;
+    color: red;
+}
+
+button {
+    color: white;
+}
+.error{
+  display:none;
+  color:red;
+}

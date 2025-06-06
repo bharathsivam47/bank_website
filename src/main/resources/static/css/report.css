@@ -1,0 +1,65 @@
+.outerdate{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+
+body {
+    height: 100vh;
+    background-image: url("loginback.jpg");
+    background-size: 1600px;
+    background-repeat: no-repeat;
+}
+
+
+input {
+
+    width: 300px !important;
+    margin: 100px !important;
+}
+
+.table1{
+    display: flex;
+    justify-content: center;
+}
+table {
+    font-family: arial, sans-serif;
+ 
+    width: 1250px
+  }
+ 
+  
+
+
+
+label {
+    color: white;
+    position: relative;
+    top: 100px;
+    left: 90px;
+    font-size: larger;
+
+    
+}
+
+table {
+    border-collapse: collapse;
+    font-family: arial, sans-serif;
+    
+  }
+
+  td {
+
+    border: 1px solid white;
+
+  }
+
+  td {
+    text-align: center;
+  }
+  table ,th, td {
+    border: 1px solid white !important;
+    color: white;
+    padding: 20px;
+  }
+  

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/admin.css">
+    <title>Delete</title>
+</head>
+<body>
+<ul class="bankname1">
+    <li class="bank">Bank of India</li>
+    <a class="logout" href="/logout"><button class="logout-button">Logout</button> </a>
+</ul>
+<div th:if="${success}">
+  <center>  <h1 style="color:green">Deposit Amount Successfully</h1></center>
+</div>
+<div th:if="${delete}">
+    <center>  <h1 style="color:green"> Account Delete Successfully</h1></center>
+</div>
+
+
+<div class="">
+    <h1 class="wel">Welcome to  Admin Dashboard</h1>
+
+    <div class="datas">
+        <div class="card data1" >
+            <h1 class="no">Number of accounts</h1>
+
+            <h1 class="numbers1">[[${bank.getTotalaccount()}]]</h1>
+
+        </div>
+
+        <div class="card data1" >
+            <h1 class="no">Total money in bank</h1>
+
+            <h1 class="numbers2">[[${bank.getTotalmoney()}]] RS</h1>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="functions">
+    <a href="/Admin-page/register">
+        <div class="card functions1">
+            <img src="/css/addaccount.png" alt="">
+            <span class="add">Add Account </span>
+        </div>
+    </a>
+    <a href="/Admin-page/delete"> <div class="card functions1">
+        <img src="/css/removeaccount.png" alt="">
+        <span class="remove">Remove account</span>
+    </div></a>
+    <a href="/Admin-page/accounts">
+        <div class="card functions1">
+            <img src="/css/viewaccount.png" alt="">
+            <span class="view" >view accounts</span> </div>
+    </a>
+
+    <a href="/Admin-page/deposit">
+    <div class="card functions1">
+        <img src="/css/money.png" alt="">
+        <span class="add">Deposit</span>
+    </div>
+    </a>
+
+
+</div>
+
+
+
+
+
+
+
+
+</body>
+</html>

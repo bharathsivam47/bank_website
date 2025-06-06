@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/user.css">
+
+  <title>Document</title>
+</head>
+<body>
+<ul class="bankname1">
+  <li class="bank">Bank of India</li>
+  <a class="logout" href="/logout"><button class="logout-button">Logout</button> </a>
+</ul>
+
+<div class="">
+  <h1 class="wel">Welcome [[${user.getFullname()}]]</h1>
+
+</div>
+
+<h1 class="accountno">Account no :192147[[${(user.getAccountDetail()).getId()}]]</h1>
+<div class="card data1" >
+  <span class="numbers2">Balance: </span>
+
+  <span class="numbers2">[[${services.checkBalance(user.getAccountDetail().getId())}]]RS</span>
+
+</div>
+<div class="functions">
+
+
+  <div class="card functions1">
+    <img src="/css/moneytransfer1.png" alt="">
+    <a class="remove" href="/user-page/transfer">Fund Transfer</a>
+  </div>
+  <div class="card functions1">
+    <img src="/css/history.png" alt="">
+    <a class="view" href="/user-page/report">Transaction History</a>
+  </div>
+
+</div>
+
+
+</body>
+</html>
